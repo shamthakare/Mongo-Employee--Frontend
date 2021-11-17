@@ -4,3 +4,4 @@ export interface employee{
   position:string;
   dept:string;
 }
+ 

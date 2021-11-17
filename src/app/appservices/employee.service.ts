@@ -8,7 +8,12 @@ export class EmployeeService {
   url = `http://localhost:3000/employee`;
 
   constructor(private http: HttpClient) { }
+  
   addEmployee(emp: employee) {
     return this.http.post(this.url, emp);
   }
+  sarvkamgar() {
+    return this.http.get(this.url);
+  }
+
 }
