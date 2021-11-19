@@ -9,8 +9,9 @@ import { EmployeeService } from '../appservices/employee.service';
 })
 export class EmployeeComponent implements OnInit {
   EmpForm: FormGroup;
-  kamgardata: any; // 3/10 marks 
-  poupband:boolean=false;
+  kamgardata: any;
+  deleteEmployee: any;
+  poupband: boolean = false;
   constructor(private fb: FormBuilder, private api: EmployeeService) {
     this.EmpForm = this.fb.group({
       name: new FormControl('', Validators.required),
@@ -42,5 +43,23 @@ export class EmployeeComponent implements OnInit {
       }
     })
   }
+  OnDeleteManus(id:any)
+  {
+    console.log(id,"id ");
+    
+    this.api.deleteEmployee(id).subscribe((res) => {
+      if (res) { 
+        alert("succesess");
+        this.loadalldata();
+      } else {
+        alert("not")
+      }
+    })
+
+  }
 
 }
+  
+    
+    
+

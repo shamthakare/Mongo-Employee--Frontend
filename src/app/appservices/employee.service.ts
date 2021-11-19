@@ -15,5 +15,7 @@ export class EmployeeService {
   sarvkamgar() {
     return this.http.get(this.url);
   }
-
-}
+  deleteEmployee(id: any ){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+} 

@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Position</th>
                 <th>Department</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,9 @@
                 <td>{{manus.name}}</td>
                 <td>{{manus.position}}</td>
                 <td>{{manus.dept}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="OnDeleteManus(manus._id)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
