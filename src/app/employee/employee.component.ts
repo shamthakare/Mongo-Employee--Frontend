@@ -57,6 +57,15 @@ export class EmployeeComponent implements OnInit {
     })
 
   }
+  UpdateEmployee(id:any){
+    this.api.UpdateEmployee(id,this.EmpForm.value).subscribe((naynesh)=>{
+      if(naynesh){
+        alert("ha mana kade data una")
+      }else{
+        alert("oo bho mana kade data nahi una")
+      }
+    })
+  }
 
 }
   
